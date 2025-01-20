@@ -1,0 +1,24 @@
+/* Correct usage of calc() */
+
+.container {
+  width: calc(100vw - 20px); /* Correct: uses vw for viewport width */
+}
+
+.nested-element {
+  width: calc(100% - 20px); /* Correct, works correctly within parent context */
+}
+
+.element {
+  width: calc(10px + 20px); /* Correct: uses only pixels */
+  height: calc(50% - 10px); /* Correct, can mix percentages and pixels correctly*/ 
+}
+
+/* Avoid mixing incompatible units */
+/*.incorrect-element {
+  width: calc(10px + 2em); /* Incorrect: mixing pixels and ems */
+}*/
+
+/* Ensure spaces around operators */
+/*.incorrect-element {
+  width: calc(10px+20px); /* Incorrect: missing spaces */
+}*/
